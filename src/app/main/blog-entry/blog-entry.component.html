@@ -1,0 +1,68 @@
+<div class="entry">
+  <div class="entry-nav">
+    <div class="entry-prev">
+      <div *ngIf="entry.previousId">
+        <a href="" [routerLink]="['/entry', entry.previousId]" class="entry-prev-btn"></a>
+        <span class="entry-btn-label">Previous</span>
+      </div>
+    </div>
+    <div class="entry-img">
+      <img src="{{entry.image}}"/>
+    </div>
+    <div class="entry-next">
+      <div *ngIf="entry.nextId">
+        <a href="" [routerLink]="['/entry', entry.nextId]" class="entry-next-btn"></a>
+        <span class="entry-btn-label">Next</span>
+      </div>
+    </div>
+  </div>
+
+  <h1 class="entry-header">{{entry.title}}</h1>
+
+  <p class="entry-text">
+    {{entry.text}}
+  </p>
+
+  <ul *ngIf="entry.highlight" class="entry-highlighted-text">
+    <li *ngFor="let highlightedText of entry.highlight">
+      <span class="inverted">{{highlightedText}}</span>
+    </li>
+  </ul>
+
+  <p class="entry-text">
+    {{entry.text}}
+  </p>
+
+  <div class="entry-share">
+    <p class="entry-share-text">
+      If you found this interesting, give others the opportunity to read it
+    </p>
+
+    <div class="entry-share-controls">
+      <div>
+        <button>Copy link</button>
+      </div>
+      <div>
+        <button class="btn-share">Share on fb</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav>
+  <ul class="entry-navigation">
+    <li><a href="" [routerLink]="['/blog']">Daily basics</a></li>
+    <li class="separator">/</li>
+    <li><a href="" [routerLink]="['/blog']">Music</a></li>
+    <li class="separator">/</li>
+    <li><a href="" [routerLink]="['/blog']">Arts</a></li>
+    <li class="separator">/</li>
+    <li><a href="" [routerLink]="['/blog']">Design</a></li>
+    <li class="separator">/</li>
+    <li><a href="" [routerLink]="['/blog']">Worth it</a></li>
+  </ul>
+</nav>
+
+<div class="entry-footer">
+  © 2019 4montnait
+</div>

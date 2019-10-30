@@ -1,0 +1,72 @@
+<div class="landing-block" [ngClass]="{'hidden': hideWelcome}">
+  <div class="logo-wrap">
+    <a class="logo" href="/">
+      <img src="assets/images/logo.png"/>
+    </a>
+  </div>
+  <h1>Welcome to our <span class="inverted">blog</span></h1>
+  <p>
+    - Introducing to our vision, ideas
+    and basicly shit we think is worth
+    speaking about
+  </p>
+</div>
+
+<div class="entries-block" [ngClass]="{'landingHidden': hideWelcome, 'fullyHidden': fullyHideTitle}">
+  <div class="entries-header">
+    <h2>Daily basics</h2>
+    <p>Lorem ipsum dolor sit amet, consectetuer
+      adipiscing elit, sed diam nonummy nibh
+      euismod tincidunt ut</p>
+
+    <nav>
+      <ul class="entries-header-navigation">
+        <li><a href="">Music</a></li>
+        <li class="separator">/</li>
+        <li><a href="">Arts</a></li>
+        <li class="separator">/</li>
+        <li><a href="">Design</a></li>
+        <li class="separator">/</li>
+        <li><a href="">Worth it</a></li>
+      </ul>
+    </nav>
+
+    <a class="toggle-entries-view" [ngClass]="{'tiles': entriesAsTiles}" (click)="toggleEntriesView()"></a>
+  </div>
+  <ul class="blog-entries">
+    <li *ngFor="let entry of blogEntries; let i = index">
+      <app-blog-entry-list-item [entry]="entry" [index]="i"></app-blog-entry-list-item>
+    </li>
+  </ul>
+
+  <a class="entries-load-more">
+    <div class="inverted load">Load</div>
+    <div class="inverted more">More</div>
+    <img class="load-more-mouth" src="assets/images/load-more.png"/>
+  </a>
+
+  <div class="blog-footer">
+    <div class="footer-top">
+      <div>
+        <ul class="footer-nav">
+          <li><a href="https://www.4montnait.com/">MARKETING</a></li>
+          <li><a href="https://www.4montnait.com/">CONCEPTION</a></li>
+          <li><a href="https://www.4montnait.com/">PRODUCTION</a></li>
+          <li><a href="https://www.4montnait.com/">ABOUT US</a></li>
+          <li><a href="https://www.4montnait.com/">CONTACT</a></li>
+        </ul>
+      </div>
+      <div class="footer-icons">
+        <a href="https://www.facebook.com/4montnait" target="_blank">
+          <fa-icon [icon]="['fab','facebook-f']"></fa-icon>
+        </a>
+        <a href="https://www.instagram.com/4montnait/" target="_blank">
+          <fa-icon [icon]="['fab','instagram']"></fa-icon>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2019 4montnait</span>
+    </div>
+  </div>
+</div>

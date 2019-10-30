@@ -1,0 +1,58 @@
+@font-face {
+  font-family: CourierRegular;
+  src: url(assets/fonts/Courier-New.ttf) format("opentype");
+}
+@font-face {
+  font-family: CourierBold;
+  src: url(assets/fonts/Courier-New-Bold.ttf) format("opentype");
+}
+@font-face {
+  font-family: RobotoBold;
+  src: url(assets/fonts/Roboto-Bold.ttf) format("opentype");
+}
+@font-face {
+  font-family: RobotoBoldItalic;
+  src: url(assets/fonts/Roboto-BoldItalic.ttf) format("opentype");
+}
+@font-face {
+  font-family: RobotoRegular;
+  src: url(assets/fonts/Roboto-Regular.ttf) format("opentype");
+}
+
+body {
+  margin: 0;
+  color: #231f20;
+}
+
+.inverted {
+  padding: 0 30px;
+  color: #fff;
+  background-color: #231f20;
+}
+
+h1 {
+  font-family: RobotoBoldItalic;
+  font-size: 56px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h2 {
+  font-family: RobotoBoldItalic;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+button {
+  padding: 15px 30px;
+  border: none;
+  font-size: 12px;
+  font-family: RobotoRegular;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: #231f20;
+}

@@ -1,0 +1,14 @@
+<div class="entry-list-item" [ngClass]="{'reversed': index % 2 !== 0}">
+  <div class="entry-list-item-description">
+    <h2>
+      {{entry.title}}
+    </h2>
+    <p>
+      {{entry.description}}
+    </p>
+    <button [routerLink]="['/entry', entry.id]">Read more</button>
+  </div>
+  <div class="entry-list-item-image">
+    <img src="{{entry.image}}" />
+  </div>
+</div>
